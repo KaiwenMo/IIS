@@ -5832,6 +5832,7 @@ shExpMatch(url,"*zyzc9.com*") ||
 shExpMatch(url,"*zzcartoon.com*") ||
 shExpMatch(url,"*zzcloud.me*") ||
 shExpMatch(url,"*zzux.com*")
+)
 		{
 	        return "PROXY 192.168.3.174:8080; DIRECT";
 		}
