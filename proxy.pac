@@ -34,7 +34,7 @@ function FindProxyForURL(url, host) {
   shExpMatch(url,"*youtu*") ||
   shExpMatch(url,"*polymer*") ||
   shExpMatch(url,"*tweetdeck*") ||
-  shExpMatch(url,"*tweetdeck*") ||
+  shExpMatch(url,"*tweetdeck*")
 )
 		{
 	        return "PROXY 192.168.3.174:8080; DIRECT";
