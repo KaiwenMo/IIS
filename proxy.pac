@@ -37,7 +37,7 @@ function FindProxyForURL(url, host) {
   shExpMatch(url,"*tweetdeck*")
 )
 		{
-	        return "PROXY 192.168.3.174:8080; DIRECT";
+	        return "PROXY 192.168.3.3:8080; DIRECT";
 		}
   else
   {
