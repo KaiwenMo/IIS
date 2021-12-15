@@ -1,12 +1,18 @@
-﻿$FindProcess = Get-Process -Name "CCProxy" -ErrorAction SilentlyContinue
+﻿function StopScheduleTasks ()
+{
+	($TaskScheduler = New-Object -ComObject Schedule.Service).Connect("localhost")
+	$MyTask = $TaskScheduler.GetFolder('\').GetTask("Reset CCProxy Software")
+	$MyTask.Enabled = $false
+}
+
+$FindProcess = Get-Process -Name "CCProxy" -ErrorAction SilentlyContinue
 
   if($FindProcess)
   {
     Get-Process -Name "CCProxy" | Stop-Process
     Start-Process -FilePath "D:\CCProxy\CCProxy.exe" -Verb RunAs -WindowStyle Minimized #Start Proxy
-    Write-Host "CCProxy is successfully restarted." -ForegroundColor Green
   }
   else
   {
-    Write-Host "No action is taken." -ForegroundColor Gray
+    StopScheduleTasks
   }
