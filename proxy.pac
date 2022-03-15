@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
 		shExpMatch(url,"*linkedin.cn*")
 	   )
 		{
-	        return;
+	        return "PROXY 127.0.0.1:8082";
 		}
   else if (
   shExpMatch(url,"*facebook*") ||
