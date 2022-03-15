@@ -2,8 +2,8 @@ function FindProxyForURL(url, host) {
   
   url = url.toLowerCase();
   host = host.toLowerCase();
-  
-	if (
+
+  	if (
 		shExpMatch(url,"*booking.cn*") ||
 		shExpMatch(url,"*linkedin.cn*")
 	   )
