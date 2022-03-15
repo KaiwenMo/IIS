@@ -3,7 +3,14 @@ function FindProxyForURL(url, host) {
   url = url.toLowerCase();
   host = host.toLowerCase();
   
-  if (
+	if (
+		shExpMatch(url,"*booking.cn*") ||
+		shExpMatch(url,"**")
+	   )
+		{
+	        return "NULL";
+		}
+  else if (
   shExpMatch(url,"*facebook*") ||
   shExpMatch(url,"*fbcdn*") ||
   shExpMatch(url,"*meta*") ||
