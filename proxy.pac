@@ -5,7 +5,7 @@ function FindProxyForURL(url, host) {
   
 	if (
 		shExpMatch(url,"*booking.cn*") ||
-		shExpMatch(url,"**")
+		shExpMatch(url,"*linkedin.cn*")
 	   )
 		{
 	        return "NULL";
